@@ -1,4 +1,4 @@
-package tests;
+package tests.api;
 
 import com.codeborne.selenide.Configuration;
 import drivers.AndroidEmulatorMobileDriver;
