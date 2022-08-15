@@ -1,0 +1,78 @@
+plugins {
+    id 'java'
+    id "io.qameta.allure" version "2.9.6"
+    id "io.freefair.lombok" version "6.0.0-m2"
+}
+
+group 'qa.guru'
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+def selenideVersion = '6.5.0',
+    allureVersion = "2.18.1",
+    restAssuredVersion = "5.1.1",
+    ownerVersion = "1.0.12",
+    junitVersion = "5.8.2",
+    slf4jVersion = "1.7.36",
+    jacksonVersion = "2.13.2.2",
+    appiumVersion = "8.1.1",
+    commonsIoVersion = "2.6"
+
+
+allure
+        {
+            report {
+                version.set(allureVersion)
+            }
+            adapter {
+                aspectjWeaver.set(true)
+                frameworks {
+                    junit5 {
+                        adapterVersion.set(allureVersion)
+                    }
+                }
+            }
+        }
+
+dependencies {
+    testImplementation(
+            "com.codeborne:selenide:$selenideVersion",
+            "io.qameta.allure:allure-selenide:$allureVersion",
+            "io.rest-assured:rest-assured:$restAssuredVersion",
+            "io.qameta.allure:allure-rest-assured:$allureVersion",
+            "org.aeonbits.owner:owner:$ownerVersion",
+            "org.junit.jupiter:junit-jupiter:$junitVersion",
+            "org.slf4j:slf4j-simple:$slf4jVersion",
+            "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion",
+            "io.appium:java-client:$appiumVersion",
+            "commons-io:commons-io:$commonsIoVersion"
+    )
+}
+compileTestJava {
+    options.encoding = 'UTF-8'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+tasks.withType(Test) {
+    systemProperties(System.getProperties())
+    useJUnitPlatform()
+
+    testLogging {
+        lifecycle {
+            events "started", "skipped", "failed", "standard_error", "standard_out"
+            exceptionFormat "short"
+        }
+    }
+}
+
+task android(type: Test) {
+    useJUnitPlatform {
+        includeTags 'android'
+    }
+}
