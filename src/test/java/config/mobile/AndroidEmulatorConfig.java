@@ -3,7 +3,7 @@ package config.mobile;
 import org.aeonbits.owner.Config;
 
 @Config.Sources({
-        "classpath:config/demowebshop/androidEmulator.properties"})
+        "classpath:config/mobile/androidEmulator.properties"})
 public interface AndroidEmulatorConfig extends Config {
     @Key("localURL")
     String localURL();

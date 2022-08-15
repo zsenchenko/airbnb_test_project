@@ -3,9 +3,8 @@ package config.mobile;
 import org.aeonbits.owner.Config;
 
 @Config.Sources({
-        "classpath:config/credentials.properties"})
+        "classpath:config/mobile/browserstack.properties"})
 public interface BrowserstackConfig extends Config {
-
     @Key("browserstack.user")
     String login();
 
