@@ -1,10 +1,10 @@
-package config;
+package config.mobile;
 
 import org.aeonbits.owner.Config;
 
 @Config.Sources({
-        "classpath:config/realDevice.properties"})
-public interface RealDeviceConfig extends Config{
+        "classpath:config/mobile/realDevice.properties"})
+public interface RealDeviceConfig extends Config {
     @Key("localURL")
     String localURL();
 
