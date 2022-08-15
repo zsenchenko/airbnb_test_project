@@ -1,5 +1,5 @@
 # airbnb_test_project
 
-![airbnb](https://user-images.githubusercontent.com/36373593/184724341-db51dd6e-0190-40bf-9d51-c08f27e9b064.png)
+![0_NChTo-XqLOxLabIW](https://user-images.githubusercontent.com/36373593/184724462-cd7a9969-cb47-41c1-84f0-15942c9832ae.png)
 
 
