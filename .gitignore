@@ -20,6 +20,8 @@
 *.rar
 *.iml
 
+*.properties
+
 # Project gen files
 .idea
 .allure/

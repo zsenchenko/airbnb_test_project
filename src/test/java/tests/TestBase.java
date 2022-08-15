@@ -1,29 +1,37 @@
 package tests;
 
-import io.qameta.allure.junit5.AllureJunit5;
+import com.codeborne.selenide.Configuration;
+import drivers.AndroidEmulatorMobileDriver;
+import drivers.BrowserstackMobileDriver;
+import drivers.RealDeviceMobileDriver;
+import helpers.AllureAttachments;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.extension.ExtendWith;
-import config.Project;
-import config.demowebshop.App;
-import helpers.AllureAttachments;
-import helpers.DriverSettings;
-import helpers.DriverUtils;
-import com.codeborne.selenide.Selenide;
+
+import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
+import static helpers.AllureAttachments.sessionId;
+
 import com.codeborne.selenide.logevents.SelenideLogger;
-import io.qameta.allure.junit5.AllureJunit5;
 import io.qameta.allure.selenide.AllureSelenide;
-import io.restassured.RestAssured;
 import org.junit.jupiter.api.AfterEach;
+import java.util.Objects;
+
 public class TestBase {
 
-@ExtendWith({AllureJunit5.class})
-public class TestBase {
+    static String deviceHost = System.getProperty("deviceHost", "local");
+
     @BeforeAll
-    static void beforeAll() {
-        DriverSettings.configure();
-        RestAssured.baseURI = App.config.baseURI();
+    public static void setup() {
+        if (Objects.equals(deviceHost, "browserStack")) {
+            Configuration.browser = BrowserstackMobileDriver.class.getName();
+        } else if (Objects.equals(deviceHost, "emulator")) {
+            Configuration.browser = AndroidEmulatorMobileDriver.class.getName();
+        } else {
+            Configuration.browser = RealDeviceMobileDriver.class.getName();
+        }
+
+        Configuration.browserSize = null;
     }
 
     @BeforeEach
@@ -34,18 +42,17 @@ public class TestBase {
 
     @AfterEach
     public void afterEach() {
-        String sessionId = DriverUtils.getSessionId();
+        String sessionId = sessionId();
 
-        AllureAttachments.addScreenshotAs("Last screenshot");
-        AllureAttachments.addPageSource();
-        AllureAttachments.addBrowserConsoleLogs();
+        AllureAttachments.screenshotAs("Last screenshot");
+        AllureAttachments.pageSource();
+        AllureAttachments.browserConsoleLogs();
 
-        Selenide.closeWebDriver();
-
-        if (Project.isVideoOn()) {
+        closeWebDriver();
+        if (Objects.equals(deviceHost, "browserStack")) {
             AllureAttachments.addVideo(sessionId);
         }
     }
 }
 
-}
+
