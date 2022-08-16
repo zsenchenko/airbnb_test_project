@@ -13,9 +13,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class DataTest {
-        @JsonProperty("data")
-        private Presentation presentation;
 
+    @JsonProperty("data")
+    private Presentation presentation;
 }
 
 //import lombok.Data;

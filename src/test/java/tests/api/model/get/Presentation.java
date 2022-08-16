@@ -13,8 +13,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Presentation {
+
     @JsonProperty("presentation")
-    private cloud.autotests.model.get.WishListIndexPage wishlistIndexPage;
-//    private String __typename;
-//
+    private WishListIndexPage wishlistIndexPage;
 }
