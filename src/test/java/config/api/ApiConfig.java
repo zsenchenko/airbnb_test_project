@@ -7,8 +7,6 @@ import org.aeonbits.owner.Config;
         "system:properties",
         "classpath:config/api/api.properties"})
 public interface ApiConfig extends Config {
-    String baseURI();
-
     String xCsrfToken();
 
     String apiKey();

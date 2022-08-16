@@ -13,12 +13,11 @@ public class Specs {
     public static ApiConfig config = ConfigFactory.create(ApiConfig.class, System.getProperties());
 
     public static RequestSpecification requestGet = with()
-            //      .filter(CustomAllureListener.withCustomTemplates())
             .log().body()
-            .baseUri("https://www.airbnb.ru/")
+//            .baseUri("https://www.airbnb.ru/")
             .contentType(JSON)
             .header("x-airbnb-api-key", config.apiKey());
-//                .cookie("_aat", .config.aat()) /вроде не надо, но непомню почему/
+//                .cookie("_aat", .config.aat()) /вроде не надо, но не помню почему/
 
 
     public static RequestSpecification requestPost = with()
