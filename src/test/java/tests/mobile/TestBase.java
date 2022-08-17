@@ -14,6 +14,7 @@ import org.junit.jupiter.api.BeforeEach;
 import tests.mobile.pages.ExplorePage;
 import tests.mobile.pages.LoginPage;
 import tests.mobile.pages.ProfilePage;
+import tests.mobile.pages.WishListPage;
 
 import java.util.Objects;
 
@@ -26,9 +27,11 @@ public class TestBase {
     static AndroidEmulatorConfig config = ConfigFactory.create(AndroidEmulatorConfig.class, System.getProperties());
 
     static String deviceHost = System.getProperty("deviceHost", "emulator");
+
     public LoginPage loginPage = new LoginPage();
     public ExplorePage explorePage = new ExplorePage();
     public ProfilePage profilePage = new ProfilePage();
+    public WishListPage wishListPage = new WishListPage();
 
     @BeforeAll
     public static void setup() {

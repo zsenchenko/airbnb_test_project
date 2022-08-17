@@ -16,6 +16,8 @@ public class ExplorePage {
     private final SelenideElement exploreButton = $(AppiumBy.id("com.airbnb.android:id/2131431041"));
     private final SelenideElement searchBar = $(AppiumBy.id("com.airbnb.android:id/search_bar"));
     private final SelenideElement searchInput = $(AppiumBy.id("com.airbnb.android:id/search_input"));
+    private final SelenideElement stays = $(AppiumBy.id("com.airbnb.android:id/2131431366"));
+    private final SelenideElement heartButton = $(AppiumBy.id("com.airbnb.android:id/2131427872"));
     private final ElementsCollection searchScreen = $$(AppiumBy.className("android.widget.TextView"));
     private final ElementsCollection cardPlace = $$(AppiumBy.className("android.widget.ImageView"));
 
@@ -35,5 +37,14 @@ public class ExplorePage {
     public void selectLocation(String name) {
         searchScreen.findBy(Condition.text(name)).click();
         cardPlace.get(0).click();
+    }
+
+    public void staysLists() {
+        stays.click();
+        stays.click();
+    }
+
+    public void pressHeart() {
+        heartButton.click();
     }
 }
