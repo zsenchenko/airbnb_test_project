@@ -1,14 +1,19 @@
 package tests.mobile;
 
 import com.codeborne.selenide.Configuration;
+import config.mobile.AndroidEmulatorConfig;
 import drivers.AndroidEmulatorMobileDriver;
 import drivers.BrowserstackMobileDriver;
 import drivers.RealDeviceMobileDriver;
 import helpers.AllureAttachments;
 import io.qameta.allure.selenide.AllureSelenide;
+import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import tests.mobile.pages.ExplorePage;
+import tests.mobile.pages.LoginPage;
+import tests.mobile.pages.ProfilePage;
 
 import java.util.Objects;
 
@@ -18,7 +23,12 @@ import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
 import static helpers.AllureAttachments.sessionId;
 
 public class TestBase {
+    static AndroidEmulatorConfig config = ConfigFactory.create(AndroidEmulatorConfig.class, System.getProperties());
+
     static String deviceHost = System.getProperty("deviceHost", "emulator");
+    public LoginPage loginPage = new LoginPage();
+    public ExplorePage explorePage = new ExplorePage();
+    public ProfilePage profilePage = new ProfilePage();
 
     @BeforeAll
     public static void setup() {
