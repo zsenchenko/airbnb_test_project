@@ -1,14 +1,15 @@
 package tests.mobile;
 
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
 
-//@Tag("Android")
+@Tag("Android")
 public class WishListTests extends TestBase {
     @Test
-    @DisplayName("Add a space to wishlist")
+    @DisplayName("Add a place to wishlist")
     void addToWishList() {
         step("Open search page", () -> {
             explorePage.checkExploreButton();
@@ -18,6 +19,9 @@ public class WishListTests extends TestBase {
         });
         step("Сlick on the heart", () -> {
             explorePage.pressHeart();
+        });
+        step("Select a wishlist to add", () -> {
+            wishListPage.selectWishList();
         });
     }
 
@@ -36,7 +40,7 @@ public class WishListTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Remove space from the wishlist")
+    @DisplayName("Remove place from the wishlist")
     void deleteFromWishlist() {
         step("Open wishlists page", () -> {
             wishListPage.openWishListPage();
@@ -49,7 +53,6 @@ public class WishListTests extends TestBase {
         });
         step("Сhecking that favorite has been deleted", () -> {
             wishListPage.favoritesList(2);
-
         });
     }
 }

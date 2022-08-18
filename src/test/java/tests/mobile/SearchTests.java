@@ -1,11 +1,12 @@
 package tests.mobile;
 
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
 
-//@Tag("Android")
+@Tag("Android")
 public class SearchTests extends TestBase {
     @Test
     @DisplayName("Search and selection of location")

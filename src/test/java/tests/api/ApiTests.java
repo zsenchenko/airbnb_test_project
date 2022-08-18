@@ -31,7 +31,7 @@ public class ApiTests extends TestBase{
                 .log().body()
                 .spec(Specs.response)
                 .extract().as(DataTest.class);
-            assertEquals("Мальдивы", data.
+            assertEquals("Maldives", data.
                     getPresentation().
                     getWishlistIndexPage().
                     getWishLists().

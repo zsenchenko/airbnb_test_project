@@ -71,8 +71,11 @@ tasks.withType(Test) {
     }
 }
 
-task android(type: Test) {
+tasks.withType(Test) {
+    systemProperties(System.getProperties())
     useJUnitPlatform {
-        includeTags 'android'
+        if (System.getProperty("tag") != null && !System.getProperty("tag").isEmpty()) {
+            includeTags System.getProperty("tag")
+        }
     }
 }
