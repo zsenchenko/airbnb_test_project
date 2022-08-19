@@ -39,16 +39,15 @@ public class RealDeviceMobileDriver implements WebDriverProvider {
         options.setDeviceName(realDeviceConfig.device());
         options.setPlatformVersion(realDeviceConfig.os_version());
         options.setApp(app.getAbsolutePath());
-        options.setAppPackage("org.wikipedia.alpha");
-        options.setAppActivity("org.wikipedia.main.MainActivity");
+        options.setAppPackage("com.airbnb.android");
+        options.setAppActivity("com.airbnb.android.feat.homescreen.HomeActivity");
 
         return new AndroidDriver(getAppiumServerUrl(), options);
     }
 
     private File getApp() {
-        String appUrl = "https://github.com/wikimedia/apps-android-wikipedia/" +
-                "releases/download/latest/app-alpha-universal-release.apk";
-        String appPath = "src/test/resources/apps/app-alpha-universal-release.apk";
+        String appUrl = "https://disk.yandex.ru/d/MCvp5E2ihbGm0Q";
+        String appPath = "src/test/resources/apk/Airbnb_v22.31_apkpure.com.apk";
 
         File app = new File(appPath);
         if (!app.exists()) {

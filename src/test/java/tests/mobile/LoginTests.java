@@ -1,5 +1,6 @@
 package tests.mobile;
 
+import io.qameta.allure.AllureId;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -9,6 +10,7 @@ import static io.qameta.allure.Allure.step;
 @Tag("Android")
 public class LoginTests extends TestBase {
     @Test
+    @AllureId("11982")
     @DisplayName("Sign in with email")
     void logInByEmailAccount() {
         step("Open app", () -> {

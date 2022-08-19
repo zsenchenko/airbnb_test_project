@@ -1,16 +1,19 @@
 package tests.mobile.pages;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import io.appium.java_client.AppiumBy;
 
 import java.time.Duration;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
 public class LoginPage {
     private final SelenideElement emailLoginButton = $(AppiumBy.id("com.airbnb.android:id/2131428930"));
     private final SelenideElement emailAndPasswordButton = $(AppiumBy.id("com.airbnb.android:id/2131428917"));
+    private final SelenideElement forgotPasswordButton = $(AppiumBy.id("com.airbnb.android:id/2131427838"));
     private final SelenideElement continueButton = $(AppiumBy.id("com.airbnb.android:id/2131429481"));
 
     public void openApp() {
@@ -27,6 +30,7 @@ public class LoginPage {
     }
 
     public void enterPassword(String password) {
+        forgotPasswordButton.shouldBe(visible, Duration.ofSeconds(7));
         emailAndPasswordButton.sendKeys(password);
         continueButton.click();
     }
