@@ -2,9 +2,9 @@ package tests.mobile;
 
 import com.codeborne.selenide.Configuration;
 import config.mobile.AndroidEmulatorConfig;
-import drivers.AndroidEmulatorMobileDriver;
-import drivers.BrowserstackMobileDriver;
-import drivers.RealDeviceMobileDriver;
+import drivers.mobile.AndroidEmulatorMobileDriver;
+import drivers.mobile.BrowserstackMobileDriver;
+import drivers.mobile.RealDeviceMobileDriver;
 import helpers.AllureAttachments;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.aeonbits.owner.ConfigFactory;

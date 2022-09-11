@@ -1,4 +1,4 @@
-package drivers;
+package drivers.mobile;
 
 import config.mobile.AndroidEmulatorConfig;
 import com.codeborne.selenide.Configuration;

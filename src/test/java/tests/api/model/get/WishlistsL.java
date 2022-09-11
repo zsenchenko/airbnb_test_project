@@ -7,9 +7,9 @@ import lombok.Data;
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class WishlistsL {
-
     @JsonProperty("__typename")
-    private String __typename;
+    private String typename;
+
     @JsonProperty("name")
     private String name;
 }

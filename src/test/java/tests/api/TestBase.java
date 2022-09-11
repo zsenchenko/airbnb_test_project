@@ -11,7 +11,6 @@ public class TestBase {
 
     @BeforeAll
     static void setup() {
-        RestAssured.baseURI = "https://www.airbnb.ru/";
         RestAssured.filters(CustomApiListener.withCustomTemplates());
     }
 

@@ -22,4 +22,6 @@ public interface WebConfig extends Config {
     String browser();
 
     String browserVersion();
+
+    String browserSize();
 }

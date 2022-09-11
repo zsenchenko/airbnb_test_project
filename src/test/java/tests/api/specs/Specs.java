@@ -2,6 +2,7 @@ package tests.api.specs;
 
 import config.api.ApiConfig;
 import io.restassured.builder.ResponseSpecBuilder;
+import io.restassured.filter.log.LogDetail;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import org.aeonbits.owner.ConfigFactory;
@@ -13,15 +14,19 @@ public class Specs {
     public static ApiConfig config = ConfigFactory.create(ApiConfig.class, System.getProperties());
 
     public static RequestSpecification requestGet = with()
-            .log().body()
-//            .baseUri("https://www.airbnb.ru/")
+            .log().all()
+            .baseUri(config.baseURI())
+            .urlEncodingEnabled(false)
+            .queryParam("extensions", config.extensions())
             .contentType(JSON)
-            .header("x-airbnb-api-key", config.apiKey());
-//                .cookie("_aat", .config.aat()) /вроде не надо, но не помню почему/
-
+            .header("x-airbnb-api-key", config.apiKey())
+            .cookie("_aat", config.aat());
 
     public static RequestSpecification requestPost = with()
-            .baseUri("https://www.airbnb.ru/")
+            .log().body()
+            .baseUri(config.baseURI())
+            .urlEncodingEnabled(false)
+            .queryParam("key", config.key())
             .contentType(JSON)
             .header("x-csrf-token", config.xCsrfToken())
             .cookie("_csrf_token", config.csrfToken())
@@ -30,6 +35,7 @@ public class Specs {
 
 
     public static ResponseSpecification response = new ResponseSpecBuilder()
+            .log(LogDetail.BODY)
             .expectStatusCode(200)
             .build();
 }

@@ -1,4 +1,4 @@
-package drivers;
+package drivers.mobile;
 
 import config.mobile.BrowserstackConfig;
 import com.codeborne.selenide.WebDriverProvider;
