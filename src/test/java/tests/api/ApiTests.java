@@ -19,7 +19,7 @@ public class ApiTests extends TestBase {
     public String id;
 
     @Test
-    @DisplayName("")
+    @DisplayName("Сheck for a specific wishlist")
     void checkWishList() {
         DataTest data = given()
                 .spec(requestGet)
@@ -38,7 +38,7 @@ public class ApiTests extends TestBase {
     }
 
     @Test
-    @DisplayName("")
+    @DisplayName("Add favorites to the wishlist")
     void addToWishList() {
         AddToWishListRequest body = new AddToWishListRequest();
         body.setWishlistId("1144175595");
@@ -61,7 +61,7 @@ public class ApiTests extends TestBase {
     }
 
     @Test
-    @DisplayName("")
+    @DisplayName("Delete favorites from the wishlist")
     void deleteFromWishList() {
         given()
                 .spec(requestPost)
@@ -73,7 +73,7 @@ public class ApiTests extends TestBase {
     }
 
     @Test
-    @DisplayName("")
+    @DisplayName("Create a new wishlist")
     void createWishList() {
         String body = "{ \"name\":\"Norway\" }";
 
@@ -90,7 +90,7 @@ public class ApiTests extends TestBase {
     }
 
     @Test
-    @DisplayName("")
+    @DisplayName("Delete a new wishlist")
     void deleteWishList() {
         given()
                 .spec(requestPost)

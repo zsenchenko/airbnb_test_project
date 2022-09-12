@@ -4,16 +4,16 @@ import org.aeonbits.owner.Config;
 
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({
-        "system:properties",
-        "classpath:config/web/selenoid.properties"})
+        "classpath:config/web/browserLocal.properties",
+        "classpath:config/web/browserSelenoid.properties"})
 public interface WebConfig extends Config {
-    String baseUrl();
+    String baseURL();
 
     String userLogin();
 
     String userPassword();
 
-    String selenoidUrl();
+    String selenoidURL();
 
     String selenoidLogin();
 
