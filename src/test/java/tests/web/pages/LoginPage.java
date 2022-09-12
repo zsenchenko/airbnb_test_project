@@ -6,8 +6,6 @@ import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Selenide.$;
 
 public class LoginPage {
-//    private SelenideElement emailOption = $(".auth__subaction").$$(".auth__link").first();
-// $(".input[name=email]");
 
     public SelenideElement
             mainMenuButton = $("[data-testid=cypress-headernav-profile]"),
@@ -15,8 +13,7 @@ public class LoginPage {
             authEmailButton = $("[data-testid=social-auth-button-email]"),
             emailField = $("[data-testid=email-login-email]"),
             passwordField = $("[data-testid=email-signup-password]"),
-
-    heartButton = $(".bq05a0m"),
+            heartButton = $(".bq05a0m"),
             loginPane = $("[data-testid=login-pane]");
 
     public void doLogin(String login, String password) {

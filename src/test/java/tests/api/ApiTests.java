@@ -17,7 +17,6 @@ import static tests.api.specs.Specs.requestPost;
 
 @Tag("API")
 public class ApiTests extends TestBase {
-    public String id;
 
     @Test
     @DisplayName("Сheck for a specific wishlist")
@@ -79,7 +78,7 @@ public class ApiTests extends TestBase {
         CreateWishListRequest body = new CreateWishListRequest();
         body.setName("Norway");
 
-        id = given()
+        wishlistId = given()
                 .spec(requestPost)
                 .body(body)
                 .when()
@@ -97,7 +96,7 @@ public class ApiTests extends TestBase {
         given()
                 .spec(requestPost)
                 .when()
-                .delete("/api/v2/wishlists/" + id)
+                .delete("/api/v2/wishlists/" + wishlistId)
                 .then()
                 .log().status()
                 .spec(Specs.response);
