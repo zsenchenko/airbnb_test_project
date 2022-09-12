@@ -3,9 +3,10 @@ package tests.api;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import tests.api.model.WishListData;
+import tests.api.model.post.WishListData;
 import tests.api.model.get.DataTest;
 import tests.api.model.post.AddToWishListRequest;
+import tests.api.model.post.CreateWishListRequest;
 import tests.api.model.post.WishListedListing;
 import tests.api.specs.Specs;
 
@@ -32,7 +33,7 @@ public class ApiTests extends TestBase {
                 getPresentation().
                 getWishlistIndexPage().
                 getWishLists().
-                getL().
+                getList().
                 get(0).
                 getName());
     }
@@ -56,7 +57,7 @@ public class ApiTests extends TestBase {
                 .extract().as(WishListedListing.class);
         assertEquals("21375511", data.
                 getListing().
-                getWishListedO().
+                getWishListed().
                 getId());
     }
 
@@ -75,7 +76,8 @@ public class ApiTests extends TestBase {
     @Test
     @DisplayName("Create a new wishlist")
     void createWishList() {
-        String body = "{ \"name\":\"Norway\" }";
+        CreateWishListRequest body = new CreateWishListRequest();
+        body.setName("Norway");
 
         id = given()
                 .spec(requestPost)
