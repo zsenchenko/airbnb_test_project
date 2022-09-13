@@ -23,17 +23,17 @@
 <img width="6%" title="Telegram" src="images/logo/Telegram.svg">
 
 ## <a name="TestCases"></a> Test cases
-- ### WEB
+- #### WEB
 <p align="center">
 <img title="WEB" src="images/screen/Web.PNG">
 </p>
 
-- ### API
+- #### API
 <p align="center">
 <img title="API" src="images/screen/Api.PNG">
 </p>
 
-- ### MOBILE
+- #### MOBILE
 <p align="center">
 <img title="Mobile" src="images/screen/Mobile.png">
 </p>
