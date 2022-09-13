@@ -17,8 +17,6 @@ public class ExplorePage {
     private final SelenideElement searchBar = $(AppiumBy.id("com.airbnb.android:id/search_bar"));
     private final SelenideElement searchInput = $(AppiumBy.id("com.airbnb.android:id/search_input"));
     private final SelenideElement stays = $(AppiumBy.id("com.airbnb.android:id/2131431366"));
-//    private final SelenideElement staysTwo = $(AppiumBy.xpath("//androidx.recyclerview.widget." +
-//            "RecyclerView[@content-desc=\"Explore Airbnb\"]/android.widget.FrameLayout[2]"));
     private final SelenideElement heartButton = $(AppiumBy.id("com.airbnb.android:id/2131427872"));
     private final ElementsCollection searchScreen = $$(AppiumBy.className("android.widget.TextView"));
     private final ElementsCollection cardPlace = $$(AppiumBy.className("android.widget.ImageView"));

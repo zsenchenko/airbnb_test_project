@@ -21,7 +21,7 @@ import java.util.Objects;
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
-import static helpers.AllureAttachments.sessionId;
+import static helpers.AllureAttachments.getSessionId;
 
 public class TestBase {
     static AndroidEmulatorConfig config = ConfigFactory.create(AndroidEmulatorConfig.class, System.getProperties());
@@ -57,7 +57,7 @@ public class TestBase {
 
     @AfterEach
     public void afterEach() {
-        String sessionId = sessionId();
+        String sessionId = getSessionId();
 
         AllureAttachments.screenshotAs("Screenshot");
         AllureAttachments.pageSource();

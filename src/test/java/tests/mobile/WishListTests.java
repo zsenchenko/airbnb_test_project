@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import static io.qameta.allure.Allure.step;
 
 @Tag("Android")
-public class WishListIdTests extends TestBase {
+public class WishListTests extends TestBase {
     @Test
     @AllureId("11979")
     @DisplayName("Add a place to wishlist")
