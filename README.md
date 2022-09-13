@@ -4,7 +4,7 @@
 
 | Airbnb, Inc. is an American company that operates an online marketplace for lodging, primarily homestays for vacation rentals, and tourism activities
 
-# <a name="Technology">Tools and a technologies</a>
+# <a name="Technology">Tools and technologies</a>
 <p  align="center">
 <img width="6%" title="Java" src="images/logo/Java.svg">
 <img width="6%" title="IntelliJ IDEA" src="images/logo/IntelliJIDEA.svg">
