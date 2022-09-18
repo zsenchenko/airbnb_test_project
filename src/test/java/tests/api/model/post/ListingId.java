@@ -1,4 +1,4 @@
-package tests.api.model.get;
+package tests.api.model.post;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -6,10 +6,7 @@ import lombok.Data;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class WishlistsList {
-    @JsonProperty("__typename")
-    private String typename;
-
-    @JsonProperty("name")
-    private String name;
+public class ListingId {
+    @JsonProperty("id")
+    private String id;
 }

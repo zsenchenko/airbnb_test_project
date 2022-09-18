@@ -1,12 +1,13 @@
 package tests.api;
 
+import io.qameta.allure.AllureId;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import tests.api.model.post.WishListData;
-import tests.api.model.get.DataTest;
-import tests.api.model.post.AddToWishListRequest;
-import tests.api.model.post.CreateWishListRequest;
+import tests.api.model.get.WishListDataGet;
+import tests.api.model.post.WishListDataPost;
+import tests.api.model.post.requests.AddToWishListRequest;
+import tests.api.model.post.requests.CreateWishListRequest;
 import tests.api.model.post.WishListedListing;
 import tests.api.specs.Specs;
 
@@ -16,28 +17,30 @@ import static tests.api.specs.Specs.requestGet;
 import static tests.api.specs.Specs.requestPost;
 
 @Tag("API")
-public class ApiTests extends TestBase {
+public class WishListTests extends TestBase {
 
     @Test
+    @AllureId("12226")
     @DisplayName("Сheck for a specific wishlist")
     void checkWishList() {
-        DataTest data = given()
+        WishListDataGet data = given()
                 .spec(requestGet)
                 .when()
                 .get("/api/v3/WishlistIndexPageQuery")
                 .then()
                 .spec(Specs.response)
-                .extract().as(DataTest.class);
+                .extract().as(WishListDataGet.class);
         assertEquals("Maldives", data.
                 getPresentation().
                 getWishlistIndexPage().
                 getWishLists().
-                getList().
+                getWishlist().
                 get(0).
                 getName());
     }
 
     @Test
+    @AllureId("12227")
     @DisplayName("Add favorites to the wishlist")
     void addToWishList() {
         AddToWishListRequest body = new AddToWishListRequest();
@@ -56,11 +59,12 @@ public class ApiTests extends TestBase {
                 .extract().as(WishListedListing.class);
         assertEquals("21375511", data.
                 getListing().
-                getWishListed().
+                getListingId().
                 getId());
     }
 
     @Test
+    @AllureId("12228")
     @DisplayName("Delete favorites from the wishlist")
     void deleteFromWishList() {
         given()
@@ -73,7 +77,8 @@ public class ApiTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Create a new wishlist")
+    @AllureId("12229")
+    @DisplayName("Create and delete the wishlist")
     void createWishList() {
         CreateWishListRequest body = new CreateWishListRequest();
         body.setName("Norway");
@@ -85,13 +90,15 @@ public class ApiTests extends TestBase {
                 .post("/api/v2/wishlists")
                 .then()
                 .log().status()
-                .spec(Specs.response).extract().as(WishListData.class).
+                .spec(Specs.response)
+                .extract().as(WishListDataPost.class).
                 getWishlist().
                 getId();
+
+        deleteWishList();
     }
 
-    @Test
-    @DisplayName("Delete a new wishlist")
+    @DisplayName("Delete the wishlist")
     void deleteWishList() {
         given()
                 .spec(requestPost)

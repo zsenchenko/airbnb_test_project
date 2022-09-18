@@ -8,5 +8,5 @@ import lombok.Data;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Listing {
     @JsonProperty("listing")
-    private WishListed wishListed;
+    private ListingId listingId;
 }

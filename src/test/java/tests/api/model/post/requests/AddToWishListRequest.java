@@ -1,4 +1,4 @@
-package tests.api.model.post;
+package tests.api.model.post.requests;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;

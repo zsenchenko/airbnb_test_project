@@ -10,5 +10,5 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class WishLists {
     @JsonProperty("wishlists")
-    private List<WishlistsList> list;
+    private List<UserWishList> wishlist;
 }

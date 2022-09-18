@@ -1,5 +1,6 @@
 package tests.web;
 
+import io.qameta.allure.AllureId;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -10,6 +11,7 @@ import static io.qameta.allure.Allure.step;
 public class SearchTests extends TestBase {
 
     @Test
+    @AllureId("12214")
     @DisplayName("Search and selection of location")
     void searchDestination() {
         step("Location selection and open", () -> {
@@ -19,7 +21,7 @@ public class SearchTests extends TestBase {
                     .selectGuests()
                     .doSearch();
         });
-        step("Checking the direction and its map.", () -> {
+        step("Checking the direction and its map", () -> {
             explorePage
                     .checkDirection()
                     .checkMap();
@@ -27,6 +29,7 @@ public class SearchTests extends TestBase {
     }
 
     @Test
+    @AllureId("12215")
     @DisplayName("Search for experience")
     void searchExperience() {
         step("Experience selection and open", () -> {

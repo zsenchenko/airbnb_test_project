@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class WishListData {
+public class WishListDataPost {
     @JsonProperty("wishlist")
     private WishListId wishlist;
 }
