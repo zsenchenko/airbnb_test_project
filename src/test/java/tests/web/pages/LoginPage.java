@@ -11,14 +11,17 @@ public class LoginPage {
             loginButton = $("[data-testid=cypress-headernav-login]"),
             authEmailButton = $("[data-testid=social-auth-button-email]"),
             emailField = $("[data-testid=email-login-email]"),
-            passwordField = $("[data-testid=email-signup-password]"),
-            heartButton = $(".bq05a0m"),
+            passwordField = $("._11hx67x"),
             loginPane = $("[data-testid=login-pane]");
 
-    public void doLogin(String login, String password) {
+    public void doLogin(String login) {
         loginButton.click();
         authEmailButton.click();
         emailField.setValue(login).pressEnter();
+    }
+
+    public void doPassword(String password) {
+        passwordField.click();
         passwordField.setValue(password).pressEnter();
     }
 

@@ -12,8 +12,10 @@ public class LoginTests extends TestBase {
     @Test
     @DisplayName("Redirect of unauthorized user to login page")
     void redirectTest() {
-        step("Check redirection", () -> {
+        step("Click on the heart", () -> {
             explorePage.addToFavorites();
+        });
+        step("Check redirection", () -> {
             loginPage.openLoginPane();
         });
     }
@@ -23,10 +25,13 @@ public class LoginTests extends TestBase {
     void loginTest() {
         step("Authorization", () -> {
             explorePage.openMenu();
-            loginPage.doLogin(config.userLogin(), config.userPassword());
+            loginPage.doLogin(config.userLogin());
+            loginPage.doPassword(config.userPassword());
         });
-        step("Check page content", () -> {
-
+        step("Check authorization", () -> {
+            explorePage
+                    .openMenu()
+                    .checkAccount();
         });
     }
 }

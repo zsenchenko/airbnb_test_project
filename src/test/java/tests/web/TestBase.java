@@ -11,7 +11,9 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import tests.web.pages.ExplorePage;
+import tests.web.pages.FilterPage;
 import tests.web.pages.LoginPage;
+import tests.web.pages.RoomPage;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
@@ -23,6 +25,8 @@ public class TestBase {
 
     public LoginPage loginPage = new LoginPage();
     public ExplorePage explorePage = new ExplorePage();
+    public FilterPage filterPage = new FilterPage();
+    public RoomPage roomPage = new RoomPage();
 
     @BeforeAll
     static void setUp() {
