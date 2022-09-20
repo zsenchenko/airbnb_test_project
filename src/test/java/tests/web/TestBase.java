@@ -21,7 +21,7 @@ import static helpers.AllureAttachments.getSessionId;
 
 public class TestBase {
     static WebConfig config = ConfigFactory.create(WebConfig.class, System.getProperties());
-    static String webHost = System.getProperty("webHost", "local");
+    static String webHost = System.getProperty("webHost", "remote");
 
     public LoginPage loginPage = new LoginPage();
     public ExplorePage explorePage = new ExplorePage();
