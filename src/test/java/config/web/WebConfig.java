@@ -9,6 +9,7 @@ import org.aeonbits.owner.Config;
         "classpath:config/web/browserSelenoid.properties"})
 public interface WebConfig extends Config {
 
+    @DefaultValue("https://www.airbnb.ru/")
     String baseURL();
 
     String userLogin();

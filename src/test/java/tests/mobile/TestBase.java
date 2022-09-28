@@ -26,7 +26,7 @@ import static helpers.AllureAttachments.getSessionId;
 public class TestBase {
     static AndroidEmulatorConfig config = ConfigFactory.create(AndroidEmulatorConfig.class, System.getProperties());
 
-    static String deviceHost = System.getProperty("deviceHost", "emulator");
+    static String deviceHost = System.getProperty("deviceHost", "browserStack");
 
     public LoginPage loginPage = new LoginPage();
     public ExplorePage explorePage = new ExplorePage();
