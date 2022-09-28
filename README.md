@@ -53,7 +53,7 @@ To run locally and in Jenkins the following command is used:
 ```bash
 gradle clean test -Dtag=<tag>
 ```
-`tag` - tests with this tag will be executed:
+`tag` - type of tests for execution:
 >- *API*
 >- *WEB*
 >- *Android*
