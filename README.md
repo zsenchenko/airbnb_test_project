@@ -25,12 +25,12 @@
 ## <a name="TestCases"></a> Test cases
 - #### WEB
 <p align="center">
-<img title="WEB" src="images/screen/WEB.PNG">
+<img title="WEB" src="images/screen/WEB.png">
 </p>
 
 - #### API
 <p align="center">
-<img title="API" src="images/screen/API.PNG">
+<img title="API" src="images/screen/API.png">
 </p>
 
 - #### Mobile
