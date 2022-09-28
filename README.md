@@ -39,3 +39,37 @@
 </p>
 
 ## <a name="RunInJenkins">Run in [Jenkins](https://jenkins.autotests.cloud/job/airbnb_test_project/)</a>
+<p align="center">
+<img src="images/screen/Jenkins.png">
+</p>
+
+- ### <a name="Running tests with parameters"></a> Running tests with parameters
+<p align="center">
+<img src="images/screen/JenkinsParam.png">
+</p>
+
+- #### Gradle command
+To run locally and in Jenkins the following command is used:
+```bash
+gradle clean test -Dtag=<tag>
+```
+`tag` - tests with this tag will be executed:
+>- *API*
+>- *WEB*
+>- *Android*
+
+Additional parameters:
+> `-Dbrowser` - Browser type: chrome, yandex, safari\
+> `-DbrowserSize` - Browser size:
+1920x1080
+1366x768
+1024x768\
+> `-DbaseUrl` URL for running tests
+```bash
+clean
+test
+-Dtag=${tag}
+-Dbrowser=${browser}
+-DbrowserSize=${browserSize}
+-DbaseUrl=${baseUrl}
+```
