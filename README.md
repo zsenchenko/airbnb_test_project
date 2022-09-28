@@ -1,4 +1,4 @@
-# Automated test project with web, api and mobile tests for airbnb service
+# Automated test project with web, api and mobile tests for [Airbnb](https://www.airbnb.ru/) service
 
 ![0_NChTo-XqLOxLabIW](https://user-images.githubusercontent.com/36373593/184724462-cd7a9969-cb47-41c1-84f0-15942c9832ae.png)
 
@@ -25,15 +25,17 @@
 ## <a name="TestCases"></a> Test cases
 - #### WEB
 <p align="center">
-<img title="WEB" src="images/screen/Web.PNG">
+<img title="WEB" src="images/screen/WEB.PNG">
 </p>
 
 - #### API
 <p align="center">
-<img title="API" src="images/screen/Api.PNG">
+<img title="API" src="images/screen/API.PNG">
 </p>
 
 - #### Mobile
 <p align="center">
-<img title="Mobile" src="images/screen/Mobile1.png">
+<img title="Mobile" src="images/screen/Mobile.png">
 </p>
+
+## <a name="RunInJenkins">Run in [Jenkins](https://jenkins.autotests.cloud/job/airbnb_test_project/)</a>
