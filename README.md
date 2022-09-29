@@ -16,7 +16,6 @@
 <img width="6%" title="Jenkins" src="images/logo/Jenkins.svg">
 <img width="6%" title="Allure Report" src="images/logo/Allure.svg">
 <img width="6%" title="Allure TestOps" src="images/logo/Allure_TO.svg">
-<img width="6%" title="Jira" src="images/logo/Jira.svg">
 <img width="6%" title="GitHub" src="images/logo/GitHub.svg">
 <img width="6%" title="Browserstack" src="images/logo/Browserstack.svg">
 <img width="6%" title="Appium" src="images/logo/Appium.svg">
@@ -110,7 +109,7 @@ The report contains a list of tests, with detailed steps, screenshots and videos
 
 ## <a name="Video"></a> :vhs: Video examples
 ### Web test
-<p align="center">
+<p align="right">
 <img src="images/gif/WebTest.gif" alt="video" width="600">
 </p>
 
