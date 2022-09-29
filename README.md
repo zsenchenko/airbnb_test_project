@@ -23,9 +23,9 @@
 <img width="6%" title="Telegram" src="images/logo/Telegram.svg">
 
 ## :page_facing_up: Test cases
-- #### WEB
+- #### Web
 <p align="center">
-<img title="WEB" src="images/screen/WEB.png">
+<img title="WEB" src="images/screen/Web.png">
 </p>
 
 - #### API
@@ -116,5 +116,5 @@ The report contains a list of tests, with detailed steps, screenshots and videos
 
 ### Mobile test
 <p align="center">
-<img src="images/gif/MobileTest.mp4" alt="video" width="600">
+<img src="images/gif/MobileTest.gif" alt="video" width="600">
 </p>
