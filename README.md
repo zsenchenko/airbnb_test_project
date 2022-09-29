@@ -110,7 +110,7 @@ The report contains a list of tests, with detailed steps, screenshots and videos
 ## <a name="Video"></a> :vhs: Video examples
 ### Web test
 <p align="left">
-<img src="images/gif/WebTest.gif" alt="video" width="600">
+<img src="images/gif/WebTest.gif" alt="video" width="700">
 </p>
 
 ### Mobile tests
