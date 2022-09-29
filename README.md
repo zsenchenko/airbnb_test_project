@@ -105,7 +105,7 @@ The report contains a list of tests, with detailed steps, screenshots and videos
 
 ## <img width="4%" src="images/logo/Telegram.svg"> Telegram notifications
 <p align="center">
-<img src="images/screen/Telegram.png">
+<img src="images/screen/Telegram2.png">
 </p>
 
 ## <a name="Video"></a> :vhs: Video examples
@@ -116,5 +116,5 @@ The report contains a list of tests, with detailed steps, screenshots and videos
 
 ### Mobile test
 <p align="center">
-<img src="images/gifs/MobileTest.mov" alt="video" width="600">
+<img src="images/gif/MobileTest.mov" alt="video" width="600">
 </p>
