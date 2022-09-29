@@ -22,7 +22,7 @@
 <img width="6%" title="Appium" src="images/logo/Appium.svg">
 <img width="6%" title="Telegram" src="images/logo/Telegram.svg">
 
-## <a name="TestCases"></a> Test cases
+## :page_facing_up: Test cases
 - #### WEB
 <p align="center">
 <img title="WEB" src="images/screen/WEB.png">
@@ -38,7 +38,7 @@
 <img title="Mobile" src="images/screen/Mobile.png">
 </p>
 
-## <a name="RunInJenkins">Run in [Jenkins](https://jenkins.autotests.cloud/job/airbnb_test_project/)
+## <a name="RunInJenkins"> <img width="4%" src="images/logo/Jenkins.svg"> Run in [Jenkins](https://jenkins.autotests.cloud/job/airbnb_test_project/)
 <p align="center">
 <img src="images/screen/Jenkins.png">
 </p>
@@ -90,15 +90,15 @@ The report contains a list of tests, with detailed steps, screenshots and videos
 
 ### Dashboards
 <p align="center">
-<img src="images/screenshots/AllureTO_Dashboard.png">
+<img src="images/screen/AllureTO_Dashboard.png">
 </p>
 
 ### Test cases
 <p align="center">
-<img src="images/screenshots/AllureTO_Tests.png">
+<img src="images/screen/AllureTO_Tests.png">
 </p>
 
 ### Launches
 <p align="center">
-<img src="images/screenshots/AllureTO_Launches.png">
+<img src="images/screen/AllureTO_Launches.png">
 </p>
