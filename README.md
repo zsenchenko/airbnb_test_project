@@ -38,17 +38,17 @@
 <img title="Mobile" src="images/screen/Mobile.png">
 </p>
 
-## <a name="RunInJenkins">Run in [Jenkins](https://jenkins.autotests.cloud/job/airbnb_test_project/)</a>
+## <a name="RunInJenkins">Run in [Jenkins](https://jenkins.autotests.cloud/job/airbnb_test_project/)
 <p align="center">
 <img src="images/screen/Jenkins.png">
 </p>
 
-- ### <a name="Running tests with parameters"></a> Running tests with parameters
+### <a name="Running tests with parameters"></a> Running tests with parameters
 <p align="center">
 <img src="images/screen/JenkinsParam.png">
 </p>
 
-- #### Gradle command
+#### Gradle command
 To run locally and in Jenkins the following command is used:
 ```bash
 gradle clean test -Dtag=<tag>
@@ -73,3 +73,32 @@ test
 -DbrowserSize=${browserSize}
 -DbaseUrl=${baseUrl}
 ```
+
+## <a name="Allure Report"></a><img width="4%" src="images/logo/Allure.svg"> Allure [Report](https://jenkins.autotests.cloud/job/airbnb_test_project/14/allure/)
+### Overview
+<p align="center">
+<img src="images/screen/AllureReport.png">
+</p>
+
+### Test suites
+The report contains a list of tests, with detailed steps, screenshots and videos of the results
+<p align="center">
+<img src="images/screen/AllureSteps.png">
+</p>
+
+## <a name="Allure TestOps"></a><img width="4%" src="images/logo/Allure_TO.svg"> [Allure TestOps](https://allure.autotests.cloud/project/1501/) integration 
+
+### Dashboards
+<p align="center">
+<img src="images/screenshots/AllureTO_Dashboard.png">
+</p>
+
+### Test cases
+<p align="center">
+<img src="images/screenshots/AllureTO_Tests.png">
+</p>
+
+### Launches
+<p align="center">
+<img src="images/screenshots/AllureTO_Launches.png">
+</p>
