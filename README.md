@@ -115,5 +115,5 @@ The report contains a list of tests, with detailed steps, screenshots and videos
 
 ### Mobile tests
 <p align="left">
-<img src="images/gif/MobileTests.gif" alt="video" width="500">
+<img src="images/gif/MobileTests1.gif" alt="video" width="500">
 </p>
