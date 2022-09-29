@@ -102,3 +102,19 @@ The report contains a list of tests, with detailed steps, screenshots and videos
 <p align="center">
 <img src="images/screen/AllureTO_Launches.png">
 </p>
+
+## <img width="4%" src="images/logo/Telegram.svg"> Telegram notifications
+<p align="center">
+<img src="images/screen/Telegram.png">
+</p>
+
+## <a name="Video"></a> :vhs: Video examples
+### Web test
+<p align="center">
+<img src="images/gif/WebTest.gif" alt="video" width="600">
+</p>
+
+### Mobile test
+<p align="center">
+<img src="images/gifs/MobileTest.mov" alt="video" width="600">
+</p>
