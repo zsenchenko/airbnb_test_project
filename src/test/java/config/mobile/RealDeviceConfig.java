@@ -12,6 +12,5 @@ public interface RealDeviceConfig extends Config {
 
     String device();
 
-    String os_version();
-
+    String osVersion();
 }

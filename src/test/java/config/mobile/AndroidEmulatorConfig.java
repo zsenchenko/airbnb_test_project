@@ -12,7 +12,7 @@ public interface AndroidEmulatorConfig extends Config {
 
     String device();
 
-    String os_version();
+    String osVersion();
 
     String userLogin();
 

@@ -7,6 +7,7 @@ import lombok.Data;
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class WishListedListing {
+
     @JsonProperty("wishlisted_listing")
     private Listing listing;
 }

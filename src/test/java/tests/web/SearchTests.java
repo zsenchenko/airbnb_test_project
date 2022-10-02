@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
 
-@Tag("WEB")
+@Tag("Web")
 public class SearchTests extends TestBase {
 
     @Test
@@ -38,9 +38,8 @@ public class SearchTests extends TestBase {
                     .selectGuests()
                     .doSearch();
         });
-        step("Checking that experience are found", () -> {
-            explorePage
-                    .checkExperiences();
-        });
+        step("Checking that experience are found", () ->
+                explorePage
+                        .checkExperiences());
     }
 }

@@ -13,14 +13,11 @@ public class SearchTests extends TestBase {
     @AllureId("11980")
     @DisplayName("Search and selection of location")
     void searchDestination() {
-        step("Search page open check", () -> {
-            explorePage.checkExploreButton();
-        });
-        step("Location search", () -> {
-            explorePage.searchInput();
-        });
-        step("Location selection and open", () -> {
-            explorePage.selectLocation("Maldives");
-        });
+        step("Search page open check", () ->
+                explorePage.checkExploreButton());
+        step("Location search", () ->
+                explorePage.searchInput());
+        step("Location selection and open", () ->
+                explorePage.selectLocation("Maldives"));
     }
 }

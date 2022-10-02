@@ -7,16 +7,15 @@ import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
 
-@Tag("WEB")
+@Tag("Web")
 public class FilterTest extends TestBase {
 
     @Test
     @AllureId("12217")
     @DisplayName("Filter application check")
     void checkConvenienceFilter() {
-        step("Add a filter for convenience", () -> {
-            filterPage.applyFilter();
-        });
+        step("Add a filter for convenience", () ->
+                filterPage.applyFilter());
         step("Checking the availability of convenience in the room", () -> {
             explorePage.openRoom();
             roomPage.checkFilterResult();

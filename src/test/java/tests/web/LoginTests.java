@@ -7,19 +7,17 @@ import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
 
-@Tag("WEB")
+@Tag("Web")
 public class LoginTests extends TestBase {
 
     @Test
     @AllureId("12216")
     @DisplayName("Redirect of unauthorized user to login page")
     void redirectTest() {
-        step("Click on the heart", () -> {
-            explorePage.addToFavorites();
-        });
-        step("Check redirection", () -> {
-            loginPage.openLoginPane();
-        });
+        step("Click on the heart", () ->
+                explorePage.addToFavorites());
+        step("Check redirection", () ->
+                loginPage.openLoginPane());
     }
 
     @Test

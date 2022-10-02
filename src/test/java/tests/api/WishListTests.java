@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import tests.api.model.get.WishListDataGet;
 import tests.api.model.post.WishListDataPost;
+import tests.api.model.post.WishListedListing;
 import tests.api.model.post.requests.AddToWishListRequest;
 import tests.api.model.post.requests.CreateWishListRequest;
-import tests.api.model.post.WishListedListing;
 import tests.api.specs.Specs;
 
 import static io.restassured.RestAssured.given;
@@ -30,13 +30,13 @@ public class WishListTests extends TestBase {
                 .then()
                 .spec(Specs.response)
                 .extract().as(WishListDataGet.class);
-        assertEquals("Maldives", data.
-                getPresentation().
-                getWishlistIndexPage().
-                getWishLists().
-                getWishlist().
-                get(0).
-                getName());
+        assertEquals("Maldives", data
+                .getPresentation()
+                .getWishlistIndexPage()
+                .getWishLists()
+                .getWishlist()
+                .get(0)
+                .getName());
     }
 
     @Test
@@ -57,10 +57,10 @@ public class WishListTests extends TestBase {
                 .then()
                 .spec(Specs.response)
                 .extract().as(WishListedListing.class);
-        assertEquals("21375511", data.
-                getListing().
-                getListingId().
-                getId());
+        assertEquals("21375511", data
+                .getListing()
+                .getListingId()
+                .getId());
     }
 
     @Test
@@ -91,21 +91,10 @@ public class WishListTests extends TestBase {
                 .then()
                 .log().status()
                 .spec(Specs.response)
-                .extract().as(WishListDataPost.class).
-                getWishlist().
-                getId();
+                .extract().as(WishListDataPost.class)
+                .getWishlist()
+                .getId();
 
-        deleteWishList();
-    }
-
-    @DisplayName("Delete the wishlist")
-    void deleteWishList() {
-        given()
-                .spec(requestPost)
-                .when()
-                .delete("/api/v2/wishlists/" + wishlistId)
-                .then()
-                .log().status()
-                .spec(Specs.response);
+        deleteWishList.deleteWishList();
     }
 }

@@ -37,7 +37,7 @@ public class RealDeviceMobileDriver implements WebDriverProvider {
         options.setAutomationName(AutomationName.ANDROID_UIAUTOMATOR2);
         options.setPlatformName(realDeviceConfig.platform());
         options.setDeviceName(realDeviceConfig.device());
-        options.setPlatformVersion(realDeviceConfig.os_version());
+        options.setPlatformVersion(realDeviceConfig.osVersion());
         options.setApp(app.getAbsolutePath());
         options.setAppPackage("com.airbnb.android");
         options.setAppActivity("com.airbnb.android.feat.homescreen.HomeActivity");

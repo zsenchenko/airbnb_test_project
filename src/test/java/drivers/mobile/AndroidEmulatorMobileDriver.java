@@ -30,7 +30,7 @@ public class AndroidEmulatorMobileDriver implements WebDriverProvider {
         options.setAutomationName(AutomationName.ANDROID_UIAUTOMATOR2);
         options.setPlatformName(config.platform());
         options.setDeviceName(config.device());
-        options.setPlatformVersion(config.os_version());
+        options.setPlatformVersion(config.osVersion());
         options.setApp(getApk().getAbsolutePath());
         options.setAppPackage("com.airbnb.android");
         options.setAppActivity("com.airbnb.android.feat.homescreen.HomeActivity");
