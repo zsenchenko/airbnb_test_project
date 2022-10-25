@@ -34,7 +34,7 @@ public class TestBase {
 
     @BeforeEach
     public void beforeEach() {
-        open(config.baseURL());
+        open("");
     }
 
     public void addListener() {

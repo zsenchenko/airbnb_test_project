@@ -46,7 +46,6 @@ public class TestBase {
         }
 
         Configuration.browserSize = null;
-        addListener("AllureSelenide", new AllureSelenide());
     }
 
     @BeforeEach

@@ -1,17 +1,25 @@
 package tests.api.specs;
 
 import config.api.ApiConfig;
+import helpers.CustomApiListener;
+import io.restassured.RestAssured;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.filter.log.LogDetail;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import org.aeonbits.owner.ConfigFactory;
+import org.junit.jupiter.api.BeforeAll;
 
 import static io.restassured.RestAssured.with;
 import static io.restassured.http.ContentType.JSON;
 
 public class Specs {
     public static ApiConfig config = ConfigFactory.create(ApiConfig.class, System.getProperties());
+
+    @BeforeAll
+    static void setup() {
+        RestAssured.filters(CustomApiListener.withCustomTemplates());
+    }
 
     public static RequestSpecification requestGet = with()
             .log().all()
