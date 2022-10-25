@@ -63,7 +63,9 @@ Additional parameters:
 1920x1080
 1366x768
 1024x768\
-> `-DbaseUrl` URL for running tests
+> `-DbaseUrl` url to run tests
+> `-DwebHost` host to run web tests
+> `-DdeviceHost` device to run mobile tests
 ```bash
 clean
 test
@@ -71,6 +73,8 @@ test
 -Dbrowser=${browser}
 -DbrowserSize=${browserSize}
 -DbaseUrl=${baseUrl}
+-DwebHost=${webHost}
+-DdeviceHost=${deviceHost}
 ```
 
 ## <a name="Allure Report"></a><img width="4%" src="images/logo/Allure.svg"> Allure [Report](https://jenkins.autotests.cloud/job/airbnb_test_project/14/allure/)
