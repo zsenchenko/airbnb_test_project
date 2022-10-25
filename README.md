@@ -63,10 +63,8 @@ Additional parameters:
 1920x1080,
 1366x768,
 1024x768\
-> `-DbaseUrl` url to run tests
-> 
-> `-DwebHost` host to run web tests
-> 
+> `-DbaseUrl` url to run tests\
+> `-DwebHost` host to run web tests\
 > `-DdeviceHost` device to run mobile tests
 ```bash
 clean
