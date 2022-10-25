@@ -60,11 +60,13 @@ gradle clean test -Dtag=<tag>
 Additional parameters:
 > `-Dbrowser` - Browser type: chrome, yandex, safari\
 > `-DbrowserSize` - Browser size:
-1920x1080
-1366x768
+1920x1080,
+1366x768,
 1024x768\
 > `-DbaseUrl` url to run tests
+> 
 > `-DwebHost` host to run web tests
+> 
 > `-DdeviceHost` device to run mobile tests
 ```bash
 clean
